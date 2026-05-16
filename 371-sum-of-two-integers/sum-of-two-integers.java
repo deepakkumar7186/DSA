@@ -1,7 +1,7 @@
 class Solution {
     public int getSum(int a, int b) {
         int sum = 0;
-        sum = a + b;
+        sum = Integer.sum(a, b);
         return sum;
 
     }
