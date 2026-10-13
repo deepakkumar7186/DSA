@@ -1,0 +1,20 @@
+import java.util.Arrays;
+class Solution {
+    public long maxAlternatingSum(int[] nums) {
+        int n = nums.length;
+        long[] sq = new long[n];
+        long totalSum = 0;
+        
+        for (int i = 0; i < n; i++) {
+            sq[i] = (long) nums[i] * nums[i];
+            totalSum += sq[i];
+        }
+        Arrays.sort(sq);
+        long smallSum = 0;
+        int half = n / 2;
+        for (int i = 0; i < half; i++) {
+            smallSum += sq[i];
+        }
+        return totalSum - 2 * smallSum;
+    }
+}
