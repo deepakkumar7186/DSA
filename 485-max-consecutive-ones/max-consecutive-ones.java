@@ -7,13 +7,14 @@ class Solution {
                 itr++;
             }
             else{
-                if(itr > max){
+                if(max < itr){
                     max = itr;
+                    // itr = 0;
                 }
                 itr = 0;
             }
         }
-        if(itr > max){
+        if(max < itr){
             max = itr;
         }
         return max;
